@@ -64,10 +64,9 @@ def get_douyin_url(url):
     print('\n\nget_douyin_url: '+get_url)
     return get_url#返回跳转url（）该跳转url含义视频链接
 
-# get_douyin_url()
-
 
 if __name__ == "__main__":
+
     headers={
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'accept-language': 'en,zh-CN;q=0.9,zh;q=0.8,zh-TW;q=0.7,en-US;q=0.6',
