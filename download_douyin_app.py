@@ -5,13 +5,12 @@ import os
 
 def download(download_author,title,url):
     # print(url)
-    # time.sleep(2)
     # print(os.listdir('抖音/'))
-    if download_author not in str(os.listdir('抖音/')):
+    if download_author not in str(os.listdir()):
         print('创建文件夹：'+ download_author)
-        os.mkdir('抖音/'+download_author)
+        os.mkdir(download_author)
     response_video = requests.get(url)
-    with open('抖音/'+download_author+'/'+title+'.mp4','wb') as file:
+    with open(download_author+'/'+title+'.mp4','wb') as file:
         file.write(response_video.content)
         print(title,'下载完成！')
 
@@ -35,7 +34,6 @@ def main(url_douyin):
     title1 = script_js.find('"nickname":"')
     title2 = script_js.find('","remarkName"')
     author = script_js[title1+12:title2]
-    # author=data._css_to_xpath('//*[@id="root"]/div/div[2]/div/div/div[2]/div/div[1]/div[2]/a/div/span/span/span/span/span')
     print('title: ',author,'\n\n',title1,'\n\n',title2,'\n\n')
     url1 = script_js.find('"playApi":"')
     url2 = script_js.find('","bitRateList"')
