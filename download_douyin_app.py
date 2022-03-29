@@ -61,7 +61,6 @@ def get_douyin_url(url):
     print('\n\nget_douyin_url: '+get_url)
     return get_url#返回跳转url该跳转url含义视频链接
 
-# get_douyin_url()
 
 
 if __name__ == "__main__":
@@ -89,11 +88,10 @@ if __name__ == "__main__":
             #https://www.douyin.com/discover?modal_id=7075484290640923937
             url = URL.replace('discover?modal_id=', 'video/')
             print(url)
-            main(url)
+            main(url)#运行主函数
         except:
             print('error\n\n')
         app()
-    # main(URL)#下载抖音视频
     app()
 
 
